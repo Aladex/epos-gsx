@@ -1,0 +1,5 @@
+﻿   24,101  a5  SET_CUR unit12/if3 VOL ch1 = -17,07 dB
+   24,103  a5  SET_CUR unit12/if3 VOL ch2 = -17,07 dB
+   24,106  a5  SET_CUR unit12/if3 MUTE ch0 = data 00
+   30,975  a5  SET_CUR unit12/if3 MUTE ch0 = data 01
+   35,482  a5  SET_CUR unit12/if3 MUTE ch0 = data 00

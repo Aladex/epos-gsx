@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# User guidance for epos-gsx1000-dkms. Building and installing the module for
+# each kernel, and removing it, is done by DKMS's own alpm hooks (package dkms),
+# for every kernel that has the package's module built; this scriptlet only
+# tells the user how to activate or roll back.
+#
+# The module is a replacement for the in-tree snd-usb-audio, which is shared by
+# every USB audio device. Installing or removing the .ko changes the file on
+# disk, not the code already resident in the kernel: a reboot is the reliable
+# way to activate the new module or to return to the stock one. Re-plugging the
+# card is enough only once the right module is already loaded.
+
+post_install() {
+    cat <<EOF
+==> epos-gsx1000-dkms: the DKMS source package is installed. The DKMS hooks build
+==> the patched snd-usb-audio for every eligible kernel (7.x; see BUILD_EXCLUSIVE_KERNEL);
+==> check the hook output above for the build result before rebooting.
+==> Reboot to load the new module (or, if nothing uses snd_usb_audio, unload and
+==>   reload it: sudo modprobe -r snd_usb_audio && sudo modprobe snd_usb_audio).
+==> Re-plugging the GSX 1000 alone does not replace an already loaded module.
+EOF
+}
+
+post_upgrade() {
+    cat <<EOF
+==> epos-gsx1000-dkms: reboot to load the rebuilt module (see post_install for
+==> the unload/reload alternative).
+EOF
+}
+
+post_remove() {
+    cat <<EOF
+==> epos-gsx1000-dkms: removed. Reboot to return to the stock snd-usb-audio
+==> (the patched module may stay resident until then).
+EOF
+}

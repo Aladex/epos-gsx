@@ -1,0 +1,73 @@
+﻿   61,319  a4  HID   Vol+
+   61,320  a4  HID   release
+   61,321  a4  HID   Vol+
+   61,322  a4  HID   release
+   61,323  a4  HID   Vol+
+   61,323  a4  SET_CUR unit12/if3 VOL ch1 = -9,83 dB
+   61,324  a4  HID   release
+   61,325  a4  SET_CUR unit12/if3 VOL ch2 = -9,83 dB
+   61,328  a4  SET_CUR unit12/if3 VOL ch1 = -9,27 dB
+   61,331  a4  SET_CUR unit12/if3 VOL ch2 = -9,27 dB
+   61,334  a4  SET_CUR unit2/if0 VOL ch1 = -0,07 dB
+   61,337  a4  SET_CUR unit2/if0 VOL ch2 = -0,07 dB
+   61,340  a4  SET_CUR unit6/if0 VOL ch0 = -1,00 dB
+   61,343  a4  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   61,346  a4  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   61,349  a4  SET_CUR unit12/if3 VOL ch1 = -8,72 dB
+   61,352  a4  SET_CUR unit12/if3 VOL ch2 = -8,72 dB
+   61,355  a4  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   61,358  a4  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   61,361  a4  SET_CUR unit12/if3 VOL ch1 = -8,20 dB
+   61,364  a4  SET_CUR unit12/if3 VOL ch2 = -8,20 dB
+   61,367  a4  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   61,370  a4  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   61,423  a4  HID   Vol+
+   61,424  a4  HID   release
+   61,424  a4  SET_CUR unit12/if3 VOL ch1 = -7,68 dB
+   61,426  a4  SET_CUR unit12/if3 VOL ch2 = -7,68 dB
+   61,429  a4  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   61,432  a4  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   61,524  a4  HID   Vol-
+   61,525  a4  SET_CUR unit12/if3 VOL ch1 = -8,20 dB
+   61,525  a4  HID   release
+   61,527  a4  SET_CUR unit12/if3 VOL ch2 = -8,20 dB
+   61,530  a4  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   61,533  a4  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   61,622  a4  HID   Vol+
+   61,622  a4  SET_CUR unit12/if3 VOL ch1 = -7,68 dB
+   61,623  a4  HID   release
+   61,625  a4  SET_CUR unit12/if3 VOL ch2 = -7,68 dB
+   61,628  a4  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   61,631  a4  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   67,106  a5  GET_CUR unit2/if0 MUTE ch0 -> mute=False
+   67,112  a5  GET_CUR unit2/if0 VOL ch1 -> 0,00 dB
+   67,118  a5  GET_MIN unit2/if0 VOL ch1 -> -0,10 dB
+   67,124  a5  GET_MAX unit2/if0 VOL ch1 -> 0,00 dB
+   67,130  a5  GET_RES unit2/if0 VOL ch1 -> 0,10 dB
+   67,136  a5  GET_CUR unit2/if0 VOL ch2 -> 0,00 dB
+   67,142  a5  GET_MIN unit2/if0 VOL ch2 -> -74,00 dB
+   67,148  a5  GET_MAX unit2/if0 VOL ch2 -> 0,00 dB
+   67,151  a5  GET_RES unit2/if0 VOL ch2 -> 1,00 dB
+   67,154  a5  GET_CUR unit6/if0 MUTE ch0 -> mute=False
+   67,157  a5  GET_CUR unit6/if0 VOL ch0 -> -1,00 dB
+   67,160  a5  GET_MIN unit6/if0 VOL ch0 -> -30,00 dB
+   67,163  a5  GET_MAX unit6/if0 VOL ch0 -> 5,00 dB
+   67,166  a5  GET_RES unit6/if0 VOL ch0 -> 1,00 dB
+   67,186  a5  GET_CUR unit12/if3 MUTE ch0 -> mute=False
+   67,189  a5  GET_CUR unit12/if3 VOL ch1 -> -1,00 dB
+   67,192  a5  GET_MIN unit12/if3 VOL ch1 -> -74,00 dB
+   67,195  a5  GET_MAX unit12/if3 VOL ch1 -> 0,00 dB
+   67,198  a5  GET_RES unit12/if3 VOL ch1 -> 1,00 dB
+   67,201  a5  GET_CUR unit12/if3 VOL ch2 -> -1,00 dB
+   67,204  a5  GET_MIN unit12/if3 VOL ch2 -> -74,00 dB
+   67,207  a5  GET_MAX unit12/if3 VOL ch2 -> 0,00 dB
+   67,210  a5  GET_RES unit12/if3 VOL ch2 -> 1,00 dB
+   67,223  a5  HID   release
+   67,224  a5  HID   release
+   67,875  a5  SET_CUR unit2/if0 MUTE ch0 = data 00
+   67,877  a5  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   67,880  a5  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   67,883  a5  SET_CUR unit6/if0 VOL ch0 = -1,00 dB
+   67,954  a5  SET_CUR unit12/if3 MUTE ch0 = data 00
+   67,956  a5  SET_CUR unit12/if3 VOL ch1 = -7,68 dB
+   67,959  a5  SET_CUR unit12/if3 VOL ch2 = -7,68 dB

@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# Maintainer: Aladex <aladex@gmail.com>
+#
+# DKMS package: builds a patched snd-usb-audio for the EPOS / Sennheiser GSX 1000 v2
+# so that the volume ring and the display behave as on Windows.
+#
+# pkgver must equal the content of VERSION in the source tree. The kernel.org
+# sources are downloaded by dkms-build.sh at build time on the target machine.
+
+pkgname=epos-gsx1000-dkms
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='snd-usb-audio volume quirk for the EPOS / Sennheiser GSX 1000 v2 (DKMS)'
+arch=('any')
+url='https://github.com/Aladex/epos-gsx'
+license=('GPL-2.0-only')
+depends=('dkms' 'curl' 'patch' 'tar' 'xz')
+install="$pkgname.install"
+source=("https://github.com/Aladex/epos-gsx/archive/v$pkgver/epos-gsx-$pkgver.tar.gz")
+# The tag does not exist yet. Replace SKIP with the real checksum after tagging:
+#   updpkgsums   (or: sha256sum epos-gsx-$pkgver.tar.gz)
+sha256sums=('SKIP')
+
+package() {
+    local src="$srcdir/epos-gsx-$pkgver"
+    # DKMS expects /usr/src/<PACKAGE_NAME>-<version>; PACKAGE_NAME is epos-gsx1000
+    # (without the -dkms suffix of the pacman package).
+    local dst="$pkgdir/usr/src/epos-gsx1000-$pkgver"
+    install -Dm644 "$src/gsx1000-volume.patch" "$dst/gsx1000-volume.patch"
+    install -Dm755 "$src/dkms/dkms-build.sh" "$dst/dkms-build.sh"
+    # dkms.conf carries @VERSION@ in the tree; substitute it here.
+    sed "s/@VERSION@/$pkgver/" "$src/dkms/dkms.conf" > "$dst/dkms.conf"
+    chmod 644 "$dst/dkms.conf"
+}

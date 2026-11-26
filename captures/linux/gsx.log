@@ -1,0 +1,26 @@
+   0.017 STATE alsa_raw=61,61 (of 74) pw=0.60
+   7.331 HID id=2 0202 VOL_DOWN
+   7.332 HID id=2 0200 release
+   7.383 STATE alsa_raw=59,59 (of 74) pw=0.55
+   8.629 HID id=2 0201 VOL_UP
+   8.630 HID id=2 0200 release
+   8.640 STATE alsa_raw=59,59 (of 74) pw=0.60
+   8.707 STATE alsa_raw=61,61 (of 74) pw=0.60
+   9.030 HID id=2 0201 VOL_UP
+   9.031 HID id=2 0200 release
+   9.042 STATE alsa_raw=61,61 (of 74) pw=0.65
+   9.108 STATE alsa_raw=63,63 (of 74) pw=0.65
+   9.133 HID id=2 0201 VOL_UP
+   9.134 HID id=2 0200 release
+   9.175 STATE alsa_raw=65,65 (of 74) pw=0.70
+  10.632 HID id=2 0202 VOL_DOWN
+  10.633 HID id=2 0200 release
+  10.643 STATE alsa_raw=65,65 (of 74) pw=0.65
+  10.710 STATE alsa_raw=63,63 (of 74) pw=0.65
+  11.629 HID id=2 0202 VOL_DOWN
+  11.630 HID id=2 0200 release
+  11.641 STATE alsa_raw=63,63 (of 74) pw=0.60
+  11.708 STATE alsa_raw=61,61 (of 74) pw=0.60
+  11.733 HID id=2 0202 VOL_DOWN
+  11.734 HID id=2 0200 release
+  11.775 STATE alsa_raw=59,59 (of 74) pw=0.55

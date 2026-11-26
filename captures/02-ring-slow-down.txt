@@ -1,0 +1,35 @@
+﻿   36,872  a5  HID   Vol-
+   36,873  a5  HID   release
+   36,875  a5  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   36,876  a5  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   36,879  a5  SET_CUR unit6/if0 VOL ch0 = -1,00 dB
+   36,882  a5  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   36,885  a5  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   36,889  a5  SET_CUR unit12/if3 VOL ch1 = -7,68 dB
+   36,891  a5  SET_CUR unit12/if3 VOL ch2 = -7,68 dB
+   36,894  a5  SET_CUR unit12/if3 VOL ch1 = -8,20 dB
+   36,897  a5  SET_CUR unit12/if3 VOL ch2 = -8,20 dB
+   37,470  a5  HID   Vol-
+   37,471  a5  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   37,471  a5  HID   release
+   37,472  a5  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   37,476  a5  SET_CUR unit12/if3 VOL ch1 = -8,72 dB
+   37,478  a5  SET_CUR unit12/if3 VOL ch2 = -8,72 dB
+   38,172  a5  HID   Vol-
+   38,173  a5  HID   release
+   38,173  a5  SET_CUR unit2/if0 VOL ch1 = -0,06 dB
+   38,175  a5  SET_CUR unit2/if0 VOL ch2 = -0,06 dB
+   38,179  a5  SET_CUR unit12/if3 VOL ch1 = -9,27 dB
+   38,181  a5  SET_CUR unit12/if3 VOL ch2 = -9,27 dB
+   39,070  a5  HID   Vol-
+   39,071  a5  SET_CUR unit2/if0 VOL ch1 = -0,07 dB
+   39,071  a5  HID   release
+   39,073  a5  SET_CUR unit2/if0 VOL ch2 = -0,07 dB
+   39,077  a5  SET_CUR unit12/if3 VOL ch1 = -9,83 dB
+   39,079  a5  SET_CUR unit12/if3 VOL ch2 = -9,83 dB
+   40,275  a5  HID   Vol-
+   40,276  a5  SET_CUR unit2/if0 VOL ch1 = -0,07 dB
+   40,276  a5  HID   release
+   40,278  a5  SET_CUR unit2/if0 VOL ch2 = -0,07 dB
+   40,282  a5  SET_CUR unit12/if3 VOL ch1 = -10,42 dB
+   40,284  a5  SET_CUR unit12/if3 VOL ch2 = -10,42 dB

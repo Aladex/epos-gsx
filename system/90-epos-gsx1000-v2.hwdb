@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# Enable the GSX media keys with the hardware mixer profile.
+evdev:input:b0003v1395p00B1*
+ KEYBOARD_KEY_c00e9=volumeup
+ KEYBOARD_KEY_c00ea=volumedown
