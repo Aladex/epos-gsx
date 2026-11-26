@@ -17,9 +17,8 @@ license=('GPL-2.0-only')
 depends=('dkms' 'curl' 'patch' 'tar' 'xz')
 install="$pkgname.install"
 source=("https://github.com/Aladex/epos-gsx/archive/v$pkgver/epos-gsx-$pkgver.tar.gz")
-# The tag does not exist yet. Replace SKIP with the real checksum after tagging:
-#   updpkgsums   (or: sha256sum epos-gsx-$pkgver.tar.gz)
-sha256sums=('SKIP')
+# After a new tag: updpkgsums && makepkg --printsrcinfo > .SRCINFO
+sha256sums=('4185b428933f41ac69d50f506c8a8aeebd01dd5ed0c29d66d9905a5333913c67')
 
 package() {
     local src="$srcdir/epos-gsx-$pkgver"

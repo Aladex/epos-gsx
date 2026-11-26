@@ -12,6 +12,6 @@ pkgbase = epos-gsx1000-dkms
 	depends = tar
 	depends = xz
 	source = https://github.com/Aladex/epos-gsx/archive/v0.1.0/epos-gsx-0.1.0.tar.gz
-	sha256sums = SKIP
+	sha256sums = 4185b428933f41ac69d50f506c8a8aeebd01dd5ed0c29d66d9905a5333913c67
 
 pkgname = epos-gsx1000-dkms
