@@ -18,7 +18,7 @@ depends=('dkms' 'curl' 'patch' 'tar' 'xz')
 install="$pkgname.install"
 source=("https://github.com/Aladex/epos-gsx/archive/v$pkgver/epos-gsx-$pkgver.tar.gz")
 # After a new tag: updpkgsums && makepkg --printsrcinfo > .SRCINFO
-sha256sums=('SKIP')
+sha256sums=('da0f36b75acfd5fc2d113af2bb998b8fc74097df1b4ae660772f4f63a94498b8')
 
 package() {
     local src="$srcdir/epos-gsx-$pkgver"
