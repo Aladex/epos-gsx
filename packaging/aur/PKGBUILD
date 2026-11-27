@@ -8,7 +8,7 @@
 # sources are downloaded by dkms-build.sh at build time on the target machine.
 
 pkgname=epos-gsx1000-dkms
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc='snd-usb-audio volume quirk for the EPOS / Sennheiser GSX 1000 v2 (DKMS)'
 arch=('any')
@@ -18,7 +18,7 @@ depends=('dkms' 'curl' 'patch' 'tar' 'xz')
 install="$pkgname.install"
 source=("https://github.com/Aladex/epos-gsx/archive/v$pkgver/epos-gsx-$pkgver.tar.gz")
 # After a new tag: updpkgsums && makepkg --printsrcinfo > .SRCINFO
-sha256sums=('4185b428933f41ac69d50f506c8a8aeebd01dd5ed0c29d66d9905a5333913c67')
+sha256sums=('SKIP')
 
 package() {
     local src="$srcdir/epos-gsx-$pkgver"

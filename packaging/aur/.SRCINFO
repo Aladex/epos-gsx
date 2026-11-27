@@ -1,6 +1,6 @@
 pkgbase = epos-gsx1000-dkms
 	pkgdesc = snd-usb-audio volume quirk for the EPOS / Sennheiser GSX 1000 v2 (DKMS)
-	pkgver = 0.1.0
+	pkgver = 0.1.1
 	pkgrel = 1
 	url = https://github.com/Aladex/epos-gsx
 	install = epos-gsx1000-dkms.install
@@ -11,7 +11,7 @@ pkgbase = epos-gsx1000-dkms
 	depends = patch
 	depends = tar
 	depends = xz
-	source = https://github.com/Aladex/epos-gsx/archive/v0.1.0/epos-gsx-0.1.0.tar.gz
-	sha256sums = 4185b428933f41ac69d50f506c8a8aeebd01dd5ed0c29d66d9905a5333913c67
+	source = https://github.com/Aladex/epos-gsx/archive/v0.1.1/epos-gsx-0.1.1.tar.gz
+	sha256sums = SKIP
 
 pkgname = epos-gsx1000-dkms

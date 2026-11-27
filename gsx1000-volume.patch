@@ -27,7 +27,7 @@
  		.map = sennheiser_pc8_map,
 --- a/sound/usb/mixer_quirks.c
 +++ b/sound/usb/mixer_quirks.c
-@@ -4418,6 +4418,346 @@
+@@ -4418,6 +4418,358 @@
  	return 0;
  }
  
@@ -79,16 +79,16 @@
 +
 +#define to_gsx1000_vol(l)	container_of(l, struct snd_gsx1000_vol, list)
 +
-+/* Caller holds vol->lock */
++/*
++ * Caller holds a snd_usb_lock reference and vol->lock, taken in that order:
++ * the lock reference may autoresume the device, and resume calls
++ * snd_gsx1000_vol_resume(), which takes vol->lock.
++ */
 +static int snd_gsx1000_vol_write(struct snd_gsx1000_vol *vol)
 +{
 +	struct snd_usb_audio *chip = vol->list.mixer->chip;
 +	__le16 buf;
 +	int ch, err;
-+
-+	CLASS(snd_usb_lock, pm)(chip);
-+	if (pm.err < 0)
-+		return pm.err;
 +
 +	/*
 +	 * Windows writes the same value to channels 1 and 2 and leaves the
@@ -129,6 +129,10 @@
 +
 +static int snd_gsx1000_vol_set(struct snd_gsx1000_vol *vol, unsigned int value)
 +{
++	CLASS(snd_usb_lock, pm)(vol->list.mixer->chip);
++	if (pm.err < 0)
++		return pm.err;
++
 +	guard(mutex)(&vol->lock);
 +	return __snd_gsx1000_vol_set(vol, value);
 +}
@@ -168,6 +172,11 @@
 +{
 +	struct snd_gsx1000_vol *vol = to_gsx1000_vol(list);
 +
++	/* Resume holds chip->active, so this does not autoresume again */
++	CLASS(snd_usb_lock, pm)(list->mixer->chip);
++	if (pm.err < 0)
++		return pm.err;
++
 +	guard(mutex)(&vol->lock);
 +	return snd_gsx1000_vol_write(vol);
 +}
@@ -194,6 +203,10 @@
 +	int value, changed;
 +
 +	if (!delta)
++		return;
++
++	CLASS(snd_usb_lock, pm)(vol->list.mixer->chip);
++	if (pm.err < 0)
 +		return;
 +
 +	scoped_guard(mutex, &vol->lock) {
@@ -361,8 +374,7 @@
 +		return err;
 +
 +	/* The device falls back to -1 dB on reconnect; make it match the control */
-+	scoped_guard(mutex, &vol->lock)
-+		err = snd_gsx1000_vol_write(vol);
++	err = snd_gsx1000_vol_resume(&vol->list);
 +	if (err < 0)
 +		usb_audio_warn(mixer->chip,
 +			       "GSX 1000: cannot set initial volume: %d\n", err);
@@ -374,7 +386,7 @@
  int snd_usb_mixer_apply_create_quirk(struct usb_mixer_interface *mixer)
  {
  	int err = 0;
-@@ -4604,6 +4944,9 @@
+@@ -4604,6 +4956,9 @@
  	case USB_ID(0x03f0, 0x0269): /* HP TB Dock G2 */
  		err = hp_dock_mixer_create(mixer);
  		break;
